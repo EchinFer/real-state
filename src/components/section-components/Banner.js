@@ -77,39 +77,38 @@ const Banner = () => {
 				<div className="container">
 					<form className="main-search-inner">
 						<div className="row custom-gutters-10">
-							<div className="col-lg-5 col-sm-6">
-								<div className="single-input-inner">
-									<input type="text" placeholder="Enter Keyword" />
-								</div>
-							</div>
-							<div className="col-lg-3 col-sm-6">
-								<div className="single-check-inner bg-white text-center">
-									<label>
-										<input defaultValue={1} name="cl-one" type="radio" />
-										<span>Rent</span>
-									</label>
-									<label>
-										<input defaultValue={1} name="cl-one" type="radio" />
-										<span>Buy</span>
-									</label>
-									<label>
-										<input defaultValue={1} name="cl-one" type="radio" />
-										<span>Sold</span>
-									</label>
-								</div>
-							</div>
-							<div className="col-lg-2 col-sm-6 mt-lg-0 mt-md-2 mt-2">
+							<div className="col-md-3">
 								<div className="single-select-inner">
 									<select>
-										<option>Office</option>
-										<option value={1}>Office 1</option>
-										<option value={2}>Office 2</option>
-										<option value={3}>Office 3</option>
+										<option>Location</option>
+										<option value={1}>Location 1</option>
+										<option value={2}>Location 2</option>
+										<option value={3}>Location 3</option>
 									</select>
 								</div>
 							</div>
-							<div className="col-lg-2 col-sm-6 mt-lg-0 mt-md-2 mt-0">
-								<a className="btn btn-white-border w-100" href="#"><i className="fa fa-search mr-1" /> Search</a>
+							<div className="col-md-3">
+								<div className="single-select-inner">
+									<select>
+										<option>Property</option>
+										<option value={1}>Property 1</option>
+										<option value={2}>Property 2</option>
+										<option value={3}>Property 3</option>
+									</select>
+								</div>
+							</div>
+							<div className="col-md-3">
+								<div className="single-select-inner">
+									<select>
+										<option>Price</option>
+										<option value={1}>Price</option>
+										<option value={2}>Price</option>
+										<option value={3}>Price</option>
+									</select>
+								</div>
+							</div>
+							<div className="col-md-3">
+								<Link className="btn btn-base w-100" to="/property-grid"><i className="fa fa-search mr-1" /> Search</Link>
 							</div>
 						</div>
 					</form>

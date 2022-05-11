@@ -16,7 +16,7 @@ const Product = () => {
 					<div className="col-lg-4 col-md-6">
 						<div className="single-product-wrap">
 							<div className="thumb">
-								<img src={publicUrl + "assets/img/product/Webp.net-resizeimage (1).png"} alt="img" />
+								<img src={publicUrl + "assets/img/product/exampleProduct.png"} alt="img" />
 								<Link className="cat" to="/property-details">Para vender</Link>
 							</div>
 							<div className="product-wrap-details">

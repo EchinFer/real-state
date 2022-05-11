@@ -7,6 +7,7 @@ import Product from './section-components/Product';
 import Product2 from './section-components/Product2';
 import Product3 from './section-components/Product3';
 import Product4 from './section-components/Product4';
+import About from './section-components/About';
 
 
 
@@ -16,7 +17,8 @@ const Home = () => {
         <Navbar />
         <Banner />
         {/* <Service /> */}
-        <Product4 />
+        <Product />
+        <About />
         {/* <Video />
         <ProductV2 />
         <Testimonial />
