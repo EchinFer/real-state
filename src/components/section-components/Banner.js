@@ -10,17 +10,19 @@ const Banner = () => {
 	return (
 		<div className="banner-area banner-area-3 banner-area-bg" style={{ background: 'url(' + publicUrl + 'assets/img/banner/3.png)' }}>
 
-			<div className="container">
+			<div className="container-fluid">
 				<div className="banner-slider owl-carousel">
 					<div className="item">
-
-						<div className="banner-area-inner" style={{ background: 'url(' + publicUrl + 'assets/img/product/exampleProduct.png)' }}>
-							<div className="row justify-content-center">
+						<div className="banner-area-inner">
+							<div className="banner-img-inner">
+								<img src={publicUrl + "assets/img/product/casas/casa1.png"} />
+							</div>
+							<div className="row justify-content-center banner-desc">
 								<div className="col-lg-8">
 									<div className="banner-inner text-center">
-										<p>Lorem ipsum dolor sit amet, consecteLorem ipsum dolor sit amet,</p>
+										<p></p>
 										<div className="line" />
-										<h2>Descripcion asdjhgasj jashgdjah sgjashgdjahs</h2>
+										<h2></h2>
 									</div>
 								</div>
 							</div>
@@ -33,41 +35,35 @@ const Banner = () => {
 						</div>
 					</div>
 					<div className="item">
-						<div className="banner-area-inner" style={{ background: 'url(' + publicUrl + 'assets/img/product/exampleProduct.png)' }}>
-							<div className="row justify-content-center">
+						<div className="banner-area-inner">
+							<div className="banner-img-inner">
+								<img src={publicUrl + "assets/img/product/casas/casa1.png"} />
+							</div>
+							<div className="row justify-content-center banner-desc">
 								<div className="col-lg-8">
 									<div className="banner-inner text-center">
-										<p>Lorem ipsum dolor sit amet, consecteLorem ipsum dolor sit amet,</p>
+										<p></p>
 										<div className="line" />
-										<h2>The Best Way To Find Your Perfect Home</h2>
+										<h2></h2>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div className="banner-meta-inner">
-							<h4>Mordan Appertment In <br /> The City Center</h4>
-							<img src={publicUrl + "assets/img/icon/location.png"} alt="img" />
-							<span>420 Love Sreet 133/2 Mirpur City, Dhaka</span>
-							<div className="btn btn-blue">$ 80,650.00</div>
 						</div>
 					</div>
 					<div className="item">
-						<div className="banner-area-inner" style={{ background: 'url(' + publicUrl + 'assets/img/product/exampleProduct.png)' }}>
-							<div className="row justify-content-center">
+						<div className="banner-area-inner">
+							<div className="banner-img-inner">
+								<img src={publicUrl + "assets/img/product/casas/casa1.png"} />
+							</div>
+							<div className="row justify-content-center banner-desc">
 								<div className="col-lg-8">
 									<div className="banner-inner text-center">
-										<p>Lorem ipsum dolor sit amet, consecteLorem ipsum dolor sit amet,</p>
+										<p></p>
 										<div className="line" />
-										<h2>The Best Way To Find Your Perfect Home</h2>
+										<h2></h2>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div className="banner-meta-inner">
-							<h4>Mordan Appertment In <br /> The City Center</h4>
-							<img src={publicUrl + "assets/img/icon/location.png"} alt="img" />
-							<span>420 Love Sreet 133/2 Mirpur City, Dhaka</span>
-							<div className="btn btn-blue">$ 80,650.00</div>
 						</div>
 					</div>
 				</div>
@@ -108,7 +104,7 @@ const Banner = () => {
 								</div>
 							</div>
 							<div className="col-md-3">
-								<Link className="btn btn-base w-100" to="/property-grid"><i className="fa fa-search mr-1" /> Search</Link>
+								<Link className="btn btn-base w-100" to="/property-grid"><i className="fa fa-search mr-1" /> Buscar</Link>
 							</div>
 						</div>
 					</form>

@@ -21,8 +21,8 @@ const Navbar = () => {
 						<div className="col-lg-4">
 							<ul className="topbar-right text-lg-right text-center">
 								<li>
-									<Link className="ml-0" to="/sign-up">Register</Link>
-									<Link to="/sign-in">Login</Link>
+									<Link className="ml-0" to="/sign-up">Registrarse</Link>
+									<Link to="/sign-in">Iniciar Sesión</Link>
 								</li>
 								<li className="social-area">
 									<a href="https://www.facebook.com/solverwp/"><i className="fab fa-facebook-f" aria-hidden="true" /></a>
@@ -45,7 +45,7 @@ const Navbar = () => {
 						</button>
 					</div>
 					<div className="logo">
-						<Link to="/"><img src={publicUrl + "assets/img/logo.png"} alt="img" /></Link>
+						<Link to="/"><img src={publicUrl + "assets/img/logos/logo-sunset.svg"} alt="img" /></Link>
 					</div>
 					<div className="nav-right-part nav-right-part-mobile">
 						<ul>
@@ -71,7 +71,7 @@ const Navbar = () => {
 					<div className="nav-right-part nav-right-part-desktop">
 						<ul>
 							<li><a className="search" href="#"><i className="fa fa-search" /></a></li>
-							<li><Link className="btn btn-base" to="/add-property"><span className="btn-icon"><i className="fa fa-plus" /></span> <span className="btn-text">SUBMIT PROPERTY</span></Link></li>
+							{/* <li><Link className="btn btn-base" to="/add-property"><span className="btn-icon"><i className="fa fa-plus" /></span> <span className="btn-text">SUBMIT PROPERTY</span></Link></li> */}
 						</ul>
 					</div>
 				</div>

@@ -45,7 +45,8 @@ Version: 1.0.2
 @import url("https://fonts.googleapis.com/css?family=Rubik:400,400i,500,600,700,800display=swap");
 /***transition***/
 :root {
-  --main-color: #F09000;
+  --main-color: #AC7100;
+  --secondary-color: #211303;
   --heading-color: #752702;
   --paragraph-color: #565872;
   --heading-font: "Rubik", sans-serif;
@@ -1429,10 +1430,11 @@ ul {
 .navbar-area {
   padding: 0;
   top: 0;
-  position: absolute;
+  /* position: absolute; */
   z-index: 98;
   width: 100% !important;
   transition: all 0.4s;
+  background-color: var(--secondary-color);
 }
 .navbar-area .navbar {
   padding: 0;
@@ -1449,6 +1451,7 @@ ul {
 }
 .navbar-area .nav-container .logo a img {
   height: auto;
+  width: 60px;
 }
 .navbar-area .nav-container .btn-transparent {
   font-size: 13px;
@@ -1641,7 +1644,7 @@ ul {
 }
 
 .navbar-area-1 .nav-container {
-  background: #061539;
+  background: var(--secondary-color);
   padding: 0 0 0 20px !important;
 }
 .navbar-area-1 .nav-right-part .btn {
@@ -2019,10 +2022,16 @@ ul {
 /*----------------------------------------------
     ## Banner
 ----------------------------------------------*/
+
+
 .banner-area {
   display: flex;
   align-items: center;
   position: relative;
+  flex-direction: column;
+}
+.banner-area .container-fluid {
+  padding: 0;
 }
 
 .banner-area-bg {
@@ -2040,9 +2049,22 @@ ul {
 }
 
 .banner-area-inner {
-  padding-top: 60px;
+  /* padding-top: 60px; */
   position: relative;
   z-index: 2;
+  flex-basis: 100%;
+}
+
+.banner-area-inner .banner-desc{
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 40%;
+}
+
+.banner-area-inner .banner-img-inner img{
+  height: 60vh;
+  object-fit: cover;
 }
 
 .banner-inner p {
@@ -2120,12 +2142,14 @@ ul {
   position: relative;
 }
 .banner-area-3 .main-search-area {
-  position: absolute;
-  top: 150px;
+  /* position: absolute;
+  top: 150px; */
   width: 100%;
+  background-color: white;
+
 }
 .banner-area-3 .main-search-inner {
-  background: var(--main-color);
+  background: var(--secondary-color);
   padding: 30px;
 }
 .banner-area-3 .banner-meta-inner {
@@ -2156,13 +2180,15 @@ ul {
   top: 50%;
   right: -110px;
   margin-top: -23px;
+  background-color: var(--secondary-color);
 }
 
 .banner-slider .item {
   align-items: center;
   align-self: center;
   display: flex;
-  padding: 360px 0 320px;
+  /* padding: 360px 0 320px; */
+  height: 60vh;
 }
 .banner-slider .owl-nav {
   display: none;

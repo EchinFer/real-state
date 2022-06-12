@@ -6,7 +6,7 @@
 	    font-size: 55px;
 	}
 	.banner-area-3 .banner-area-inner {
-	    padding-top: 170px;
+	    /* padding-top: 170px; */
 	}
 	.advance-search {
 	    font-size: 14px;
@@ -18,7 +18,7 @@
 	    padding: 160px 0;
 	}
 	.banner-slider .item {
-	    padding: 120px 0 180px;
+	    /* padding: 120px 0 180px; */
 	}
 }
 @media (max-width: 1200px) and (min-width: 768px) {
