@@ -22,32 +22,31 @@ const Footer = () => {
 			<div className="footer-top">
 				<div className="container">
 					<div className="row">
-						<div className="col-md-4">
-							<a href="index.html"><img src={publicUrl + "assets/img/logo.png"} alt="img" /></a>
+						<div className="col-md-4 logo">
+							<Link to="/"><img src={publicUrl + "assets/img/logos/logo-sunset.svg"} alt="img" />SUNSET REALTY</Link>
 						</div>
 						<div className="col-md-8 text-md-right mt-3 mt-md-0">
 							<ul className="social-area">
 								<li><a href="https://www.facebook.com/solverwp/"><i className="fab fa-facebook-f" aria-hidden="true" /></a></li>
 								<li><a href="https://www.twitter.com/solverwp/"><i className="fab fa-twitter" aria-hidden="true" /></a></li>
 								<li><a href="https://www.instagram.com/solverwp/"><i className="fab fa-instagram" aria-hidden="true" /></a></li>
-								<li><a href="https://www.skype.com/solverwp/"><i className="fab fa-skype" aria-hidden="true" /></a></li>
-								<li><a href="https://www.pinterest.com/solverwp/"><i className="fab fa-pinterest-p" aria-hidden="true" /></a></li>
+								{/* <li><a href="https://www.skype.com/solverwp/"><i className="fab fa-skype" aria-hidden="true" /></a></li>
+								<li><a href="https://www.pinterest.com/solverwp/"><i className="fab fa-pinterest-p" aria-hidden="true" /></a></li> */}
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className="footer-middle bg-black">
+			{/* <div className="footer-middle">
 				<div className="container">
 					<div className="row">
 						<div className="col-lg-4 col-md-6">
 							<div className="widget widget_about">
-								<h4 className="widget-title">Company</h4>
+								<h4 className="widget-title">Nosotros</h4>
 								<div className="details">
-									<p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur et adipisicing  eiusmod tempor incididunt labore</p>
-									<p><i className="fas fa-map-marker-alt" /> 420 Love Sreet 133/2 Mirpur City, Dhaka</p>
-									<p><i className="fas fa-phone-volume" /> +(066) 19 5017 800 628</p>
-									<p><i className="fas fa-envelope" /> info.contact@gmail.com</p>
+									<p>Somos una empresa joven que buscamos ayudar a encontrar a cada cliente su propio hogar</p>
+									<p><i className="fas fa-phone-volume" /> +595 983 263 018</p>
+									<p><i className="fas fa-envelope" /> info.sunset@gmail.com</p>
 								</div>
 							</div>
 						</div>
@@ -89,8 +88,8 @@ const Footer = () => {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className="footer-bottom bg-black">
+			</div> */}
+			<div className="footer-bottom">
 				<div className="container">
 					<div className="row">
 						<div className="col-md-7 align-self-center">
@@ -99,16 +98,13 @@ const Footer = () => {
 						<div className="col-md-5 text-md-right go-top">
 							<ul>
 								<li>
-									<Link to="/">Home</Link>
+									<Link to="/">Inicio</Link>
 								</li>
 								<li>
-									<Link to="/about">About</Link>
+									<Link to="/about">Propiedades</Link>
 								</li>
 								<li>
-									<Link to="/blog">Blog</Link>
-								</li>
-								<li>
-									<Link to="/contact">Contact</Link>
+									<Link to="/blog">Contacto</Link>
 								</li>
 							</ul>
 						</div>

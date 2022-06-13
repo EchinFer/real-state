@@ -1,16 +1,17 @@
 import React from 'react';
-import Navbar from './global-components/navbar-v2';
-import PageHeader from './global-components/page-header';
+import Footer from './global-components/Footer';
+import Navbar from './global-components/Navbar';
+import PageHeader from './global-components/PageHeader';
 import PropertyDetailsPage from './section-components/property-details';
-import Footer from './global-components/footer';
 
 const PropertyDetails = () => {
-    return <div>
+
+    return <>
         <Navbar />
-        <PageHeader headertitle="Property Details"  />
+        <PageHeader headertitle="TU NUEVO HOGAR"  />
         <PropertyDetailsPage />
         <Footer />
-    </div>
+    </>;
 }
 
 export default PropertyDetails

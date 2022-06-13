@@ -13,9 +13,9 @@ const Navbar = () => {
 					<div className="row">
 						<div className="col-lg-8 text-lg-left text-center">
 							<ul>
-								<li><p><img src={publicUrl + "assets/img/icon/location.png"} alt="img" /> 420 Love Sreet 133/2 flx City</p></li>
-								<li><p><img src={publicUrl + "assets/img/icon/phone.png"} alt="img" /> +(06) 017 800 628</p></li>
-								<li><p><img src={publicUrl + "assets/img/icon/envelope.png"} alt="img" />  info.contact@gmail.com</p></li>
+								{/* <li><p><img src={publicUrl + "assets/img/icon/location.png"} alt="img" /> 420 Love Sreet 133/2 flx City</p></li> */}
+								<li><p><img src={publicUrl + "assets/img/icon/phone.png"} alt="img" /> +595 983 263 018</p></li>
+								<li><p><img src={publicUrl + "assets/img/icon/envelope.png"} alt="img" />info.sunset@gmail.com</p></li>
 							</ul>
 						</div>
 						<div className="col-lg-4">

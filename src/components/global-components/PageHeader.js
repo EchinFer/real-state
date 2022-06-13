@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PageHeader = () => {
-	let HeaderTitle = this.props.headertitle;
+const PageHeader = ({headertitle, subheader}) => {
+	let HeaderTitle = headertitle;
 	let publicUrl = process.env.PUBLIC_URL + '/'
-	let Subheader = this.props.subheader ? this.props.subheader : HeaderTitle
+	let Subheader = subheader ? subheader : HeaderTitle;
 
 	return (
-		<div className="breadcrumb-area bg-overlay-2" style={{ backgroundImage: 'url("' + publicUrl + 'assets/img/other/7.png")' }}>
+		<div className="breadcrumb-area bg-overlay-2" style={{ backgroundImage: 'url("' + publicUrl + 'assets/img/other/1154405.webp")' }}>
 			<div className="container">
 				<div className="breadcrumb-inner">
 					<div className="section-title text-center">
@@ -24,4 +24,4 @@ const PageHeader = () => {
 }
 
 
-export default PageHeader
+export default PageHeader;
