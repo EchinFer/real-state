@@ -1,8 +1,9 @@
 import React from 'react';
-import Navbar from './global-components/navbar-v2';
-import PageHeader from './global-components/page-header';
-import ContactForm from './section-components/contact-form';
-import Footer from './global-components/footer-v2';
+import Footer from './global-components/Footer';
+import Navbar from './global-components/Navbar';
+import PageHeader from './global-components/PageHeader';
+import ContactForm from './section-components/ContactForm';
+
 
 const ContactPage = () => {
     return <div>

@@ -13,7 +13,7 @@ const PropertyDetailsPage = () => {
 
 	}, []);
 
-	return <div className="property-page-area pd-top-120 pd-bottom-90 ">
+	return <div className="property-page-area pd-bottom-90 ">
 		<div className="container">
 			<div className="property-details-top pd-bottom-70">
 				<div className="property-details-top-inner">

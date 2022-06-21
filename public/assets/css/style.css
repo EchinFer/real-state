@@ -1126,6 +1126,9 @@ ul {
   line-height: 41px;
   font-size: 14px;
 }
+.social-area.style-3 li a:hover {
+  background: var(--secondary-color);
+}
 
 /*----------------------------------------
   ## Search Popup
@@ -1547,6 +1550,7 @@ ul {
 
 .navbar-area .navbar {
   padding: 0;
+  z-index: 100;
 }
 
 .navbar-area .nav-container {
@@ -1785,7 +1789,7 @@ ul {
 
 .nav-right-part ul li a {
   color: #fff;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .navbar-area-1 .nav-container {
@@ -2168,12 +2172,12 @@ ul {
 
 @media all and (max-width: 575px) {
   .navbar-area .nav-container .logo a img {
-    width: 125px;
+    width: 55px;
   }
 
   .nav-right-part {
-    margin-right: 30px;
-    right: 0;
+    margin-right: 30px;    
+    right: 16px;
   }
 
   .nav-right-part .btn {
@@ -2249,7 +2253,6 @@ ul {
   position: absolute;
   right: 0;
   left: 0;
-  top: 40%;
 }
 
 .banner-area-inner .banner-img-inner img {
@@ -2352,13 +2355,13 @@ ul {
 .banner-area-3 .main-search-inner {
   background: var(--secondary-color);
   padding: 30px;
+  margin-top: 30px;
 }
 
-.banner-area-3 .banner-meta-inner {
+.banner-area-3 .banner-meta-inner .banner-meta{
   background: var(--main-color);
   display: inline-block;
   position: absolute;
-  left: 20px;
   z-index: 4;
   bottom: 0;
   padding: 18px 70px 17px 20px;
@@ -2403,13 +2406,15 @@ ul {
 
 .banner-slider .owl-dots {
   position: absolute;
-  right: 0;
-  bottom: 50px;
+  right: 11%;
+  bottom: 10px;
 }
 
 .banner-slider .owl-dots {
-  margin-top: 40px;
+  margin-top: 0px;
 }
+
+
 
 .banner-slider .owl-dots .owl-dot {
   border: 0;
@@ -2431,6 +2436,14 @@ ul {
 .banner-map-area .single-product-wrap.style-bottom {
   max-width: 380px !important;
   margin-bottom: 0 !important;
+}
+
+@media all and (max-width: 991px) {
+  .banner-slider .owl-dots{
+    margin-top: 0px;
+    transform: translate(10px, 10px);
+    left: 35%;
+  }
 }
 
 /*--------------------------------------------------
@@ -2918,6 +2931,9 @@ ul {
   transform: scale(1);
   border-radius: 50%;
   margin-right: 14px;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
 }
 
 .single-product-wrap .product-wrap-details .media .media-body h5 {
@@ -4190,7 +4206,7 @@ ul {
 
 .single-property-grid {
   background: #fff;
-  padding: 35px 50px;
+  padding: 35px 0px;
   margin-bottom: 40px;
   border-radius: 7px;
 }
@@ -4294,6 +4310,9 @@ ul {
 
 .product-thumbnail-carousel img {
   width: 100%;
+  height: 182px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .product-thumbnail-carousel .single-thumbnail-item {
@@ -4870,7 +4889,7 @@ ul {
   
 }
 
-.footer-area .logo a {
+.logo a {
   font-size: 22px;
   color: white;
   font-family: Playfir;

@@ -14,7 +14,7 @@ const About = () => {
           <div className="col-lg-8 order-lg-1">
             <div className="details">
               <div className="section-title mb-4">
-                <h6>We are offring the best real estate</h6>
+                <h6>Estamos ofreciendo los mejores bienes raíces</h6>
                 <h2>The exparts in local.</h2>
                 <p>Lorem ipsum dolor  consectetur aLorem ipsum  amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
               </div>

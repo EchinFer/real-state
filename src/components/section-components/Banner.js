@@ -18,49 +18,12 @@ const Banner = () => {
 								<img src={publicUrl + "assets/img/product/casas/casa1.png"} />
 							</div>
 							<div className="row justify-content-center banner-desc">
-								<div className="col-lg-8">
-									<div className="banner-inner text-center">
-										<p></p>
-										<div className="line" />
-										<h2></h2>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="banner-meta-inner">
-							<h4>Mordan Appertment In <br /> The City Center</h4>
-							<img src={publicUrl + "assets/img/icon/location.png"} alt="img" />
-							<span>420 Love Sreet 133/2 Mirpur City, Dhaka</span>
-							<div className="btn btn-blue">$ 80,650.00</div>
-						</div>
-					</div>
-					<div className="item">
-						<div className="banner-area-inner">
-							<div className="banner-img-inner">
-								<img src={publicUrl + "assets/img/product/casas/casa1.png"} />
-							</div>
-							<div className="row justify-content-center banner-desc">
-								<div className="col-lg-8">
-									<div className="banner-inner text-center">
-										<p></p>
-										<div className="line" />
-										<h2></h2>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="item">
-						<div className="banner-area-inner">
-							<div className="banner-img-inner">
-								<img src={publicUrl + "assets/img/product/casas/casa1.png"} />
-							</div>
-							<div className="row justify-content-center banner-desc">
-								<div className="col-lg-8">
-									<div className="banner-inner text-center">
-										<p></p>
-										<div className="line" />
-										<h2></h2>
+								<div className="container banner-meta-inner">
+									<div className='banner-meta'>
+										<h4>Triplex ¡A estrenar!</h4>
+										<img src={publicUrl + "assets/img/icon/location.png"} alt="img" />
+										<span>Villa Elisa</span>
+										<div className="btn btn-blue">₲ 345,000,000</div>
 									</div>
 								</div>
 							</div>
@@ -76,30 +39,32 @@ const Banner = () => {
 							<div className="col-md-3">
 								<div className="single-select-inner">
 									<select>
-										<option>Location</option>
-										<option value={1}>Location 1</option>
-										<option value={2}>Location 2</option>
-										<option value={3}>Location 3</option>
+										<option>Ubicación</option>
+										<option value={1}>Villa Elisa</option>
+										<option value={2}>Ñemby</option>
+										<option value={3}>Lambare</option>
+										<option value={3}>San Lorenzo</option>
 									</select>
 								</div>
 							</div>
 							<div className="col-md-3">
 								<div className="single-select-inner">
 									<select>
-										<option>Property</option>
-										<option value={1}>Property 1</option>
-										<option value={2}>Property 2</option>
-										<option value={3}>Property 3</option>
+										<option>Tipo de propiedad</option>
+										<option value={1}>Casa</option>
+										<option value={2}>Duplex</option>
+										<option value={3}>Terreno</option>
+										<option value={3}>Departamento</option>
 									</select>
 								</div>
 							</div>
 							<div className="col-md-3">
 								<div className="single-select-inner">
 									<select>
-										<option>Price</option>
-										<option value={1}>Price</option>
-										<option value={2}>Price</option>
-										<option value={3}>Price</option>
+										<option>Precio</option>
+										<option value={1}>50,000,000</option>
+										<option value={2}>100,000,000</option>
+										<option value={3}>150,000,000</option>
 									</select>
 								</div>
 							</div>

@@ -28,8 +28,6 @@ const Navbar = () => {
 									<a href="https://www.facebook.com/solverwp/"><i className="fab fa-facebook-f" aria-hidden="true" /></a>
 									<a href="https://www.twitter.com/solverwp/"><i className="fab fa-twitter" aria-hidden="true" /></a>
 									<a href="https://www.instagram-plus.com/solverwp/"><i className="fab fa-instagram" aria-hidden="true" /></a>
-									<a href="https://www.skype.com/solverwp/"><i className="fab fa-skype" aria-hidden="true" /></a>
-									<a href="https://www.pinterest.com/solverwp/"><i className="fab fa-pinterest-p" aria-hidden="true" /></a>
 								</li>
 							</ul>
 						</div>
@@ -45,12 +43,12 @@ const Navbar = () => {
 						</button>
 					</div>
 					<div className="logo">
-						<Link to="/"><img src={publicUrl + "assets/img/logos/logo-sunset.svg"} alt="img" /></Link>
+						<Link to="/"><img src={publicUrl + "assets/img/logos/logo-sunset.svg"} alt="img" /> SUNSET REALTY</Link>
 					</div>
 					<div className="nav-right-part nav-right-part-mobile">
 						<ul>
-							<li><a className="search" href="#"><i className="fa fa-search" /></a></li>
-							<li><Link className="btn btn-base" to="/add-property"><span className="btn-icon"><i className="fa fa-plus" /></span> <span className="btn-text">SUBMIT PROPERTY</span></Link></li>
+							{/* <li><a className="search" href="#"><i className="fa fa-search" /></a></li> */}
+							{/* <li><Link className="btn btn-base" to="/add-property"><span className="btn-icon"><i className="fa fa-plus" /></span> <span className="btn-text">SUBMIT PROPERTY</span></Link></li> */}
 						</ul>
 					</div>
 					<div className="collapse navbar-collapse" id="dkt_main_menu">
@@ -59,10 +57,10 @@ const Navbar = () => {
 								<Link to="/">Inicio</Link>
 							</li>
 							<li className="menu-item-has-children current-menu-item">
-								<Link to="/#">Propiedades</Link>
+								<Link to="/properties">Propiedades</Link>
 								<ul className="sub-menu">
-									<li><Link to="/property">Venta</Link></li>
-									<li><Link to="/property-grid">Alquiler</Link></li>
+									<li><Link to="/#">Venta</Link></li>
+									<li><Link to="/#">Alquiler</Link></li>
 								</ul>
 							</li>
 							<li><Link to="/contact">Contacto</Link></li>
