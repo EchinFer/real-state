@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/sunset-realty/static/js/main.02921ccb.js",
+    "main.js": "/sunset-realty/static/js/main.9eb0fd4c.js",
     "index.html": "/sunset-realty/index.html",
-    "main.02921ccb.js.map": "/sunset-realty/static/js/main.02921ccb.js.map"
+    "main.9eb0fd4c.js.map": "/sunset-realty/static/js/main.9eb0fd4c.js.map"
   },
   "entrypoints": [
-    "static/js/main.02921ccb.js"
+    "static/js/main.9eb0fd4c.js"
   ]
 }

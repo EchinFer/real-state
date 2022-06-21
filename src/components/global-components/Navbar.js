@@ -25,9 +25,9 @@ const Navbar = () => {
 									<Link to="/sign-in">Iniciar Sesión</Link>
 								</li>
 								<li className="social-area">
-									<a href="https://www.facebook.com/solverwp/"><i className="fab fa-facebook-f" aria-hidden="true" /></a>
-									<a href="https://www.twitter.com/solverwp/"><i className="fab fa-twitter" aria-hidden="true" /></a>
-									<a href="https://www.instagram-plus.com/solverwp/"><i className="fab fa-instagram" aria-hidden="true" /></a>
+									<a href="https://www.facebook.com/#/"><i className="fab fa-facebook-f" aria-hidden="true" target="_blank" /></a>
+									<a href="https://www.twitter.com/#/"><i className="fab fa-twitter" aria-hidden="true" target="_blank" /></a>
+									<a href="https://www.instagram-plus.com/#/"><i className="fab fa-instagram" aria-hidden="true" target="_blank" /></a>
 								</li>
 							</ul>
 						</div>

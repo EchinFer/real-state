@@ -27,9 +27,9 @@ const Footer = () => {
 						</div>
 						<div className="col-md-8 text-md-right mt-3 mt-md-0">
 							<ul className="social-area">
-								<li><a href="https://www.facebook.com/solverwp/"><i className="fab fa-facebook-f" aria-hidden="true" /></a></li>
-								<li><a href="https://www.twitter.com/solverwp/"><i className="fab fa-twitter" aria-hidden="true" /></a></li>
-								<li><a href="https://www.instagram.com/solverwp/"><i className="fab fa-instagram" aria-hidden="true" /></a></li>
+								<li><a href="https://www.facebook.com/#/"><i className="fab fa-facebook-f" aria-hidden="true" target="_blank" /></a></li>
+								<li><a href="https://www.twitter.com/#/"><i className="fab fa-twitter" aria-hidden="true" target="_blank" /></a></li>
+								<li><a href="https://www.instagram.com/#/"><i className="fab fa-instagram" aria-hidden="true" target="_blank" /></a></li>
 								{/* <li><a href="https://www.skype.com/solverwp/"><i className="fab fa-skype" aria-hidden="true" /></a></li>
 								<li><a href="https://www.pinterest.com/solverwp/"><i className="fab fa-pinterest-p" aria-hidden="true" /></a></li> */}
 							</ul>
