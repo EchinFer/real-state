@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/static/js/main.80ac7a38.js",
-    "index.html": "/index.html",
-    "main.80ac7a38.js.map": "/static/js/main.80ac7a38.js.map"
+    "main.js": "/sunset-realty/static/js/main.7688ad34.js",
+    "index.html": "/sunset-realty/index.html",
+    "main.7688ad34.js.map": "/sunset-realty/static/js/main.7688ad34.js.map"
   },
   "entrypoints": [
-    "static/js/main.80ac7a38.js"
+    "static/js/main.7688ad34.js"
   ]
 }

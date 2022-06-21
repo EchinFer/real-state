@@ -121,7 +121,7 @@
 	    background-color: rgba(6, 21, 57, 0.99);
 	}
 	.banner-area-3 .banner-area-inner {
-	    padding-top: 216px;
+	    /* padding-top: 216px; */
 	}
 	.single-service-wrap {
 		margin-bottom: 110px;
@@ -230,7 +230,7 @@
 	    padding: 240px 0 350px 0;
 	}
 	.banner-slider .owl-dots {
-	    bottom: 7px;
+		bottom: 20px;
 	}
 	.single-about-inner.about-line-right .details {
 	    padding: 30px;
@@ -297,13 +297,19 @@
 	    font-size: 9px;
 	}
 	.banner-slider .item {
-	    padding: 215px 0 150px;
+	    /* padding: 215px 0 150px; */
 	}
+
+	.banner-area-3 .banner-meta-inner .banner-meta{
+		bottom: 50px;
+		background-color: rgba(172, 113, 0, 0.8);
+	}
+
 	.banner-area-3 .banner-meta-inner {
 		left: 0;
 	}
 	.banner-area-3 .banner-meta-inner .btn {
-	    position: relative;
+	    /* position: relative;
 	    top: auto;
 	    right: auto;
 	    margin-top: 0;
@@ -311,7 +317,8 @@
 	    height: auto;
 	    line-height: initial;
 	    background: none;
-	    font-size: 20px;
+	    font-size: 20px; */
+		background-color: rgba(33, 19, 3, 0.8);
 	}
 	.banner-slider .owl-dots .owl-dot.active {
 	    background: var(--heading-color);
