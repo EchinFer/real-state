@@ -32,7 +32,7 @@ const Banner = () => {
 				</div>
 			</div>
 
-			<div className="main-search-area">
+			{/* <div className="main-search-area">
 				<div className="container">
 					<form className="main-search-inner">
 						<div className="row custom-gutters-10">
@@ -74,7 +74,7 @@ const Banner = () => {
 						</div>
 					</form>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	)
 }

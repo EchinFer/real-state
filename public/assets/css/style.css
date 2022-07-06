@@ -1126,6 +1126,7 @@ ul {
   line-height: 41px;
   font-size: 14px;
 }
+
 .social-area.style-3 li a:hover {
   background: var(--secondary-color);
 }
@@ -1314,6 +1315,10 @@ ul {
   background: var(--main-color);
 }
 
+.bg-secondary {
+  background: var(--secondary-color);
+}
+
 .bg-gray {
   background: #f2f3f5;
 }
@@ -1334,7 +1339,18 @@ ul {
   width: 100%;
   left: 0;
   top: 0;
-  background: rgba(6, 21, 57, 0.98);
+  /* background: rgba(6, 21, 57, 0.98); */
+  background: rgba(172, 113, 0, 1);
+}
+
+.bg-overlay-secondary:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(172, 113, 0, 0.98);
 }
 
 .bg-overlay .container {
@@ -2176,7 +2192,7 @@ ul {
   }
 
   .nav-right-part {
-    margin-right: 30px;    
+    margin-right: 30px;
     right: 16px;
   }
 
@@ -2358,7 +2374,7 @@ ul {
   margin-top: 30px;
 }
 
-.banner-area-3 .banner-meta-inner .banner-meta{
+.banner-area-3 .banner-meta-inner .banner-meta {
   background: var(--main-color);
   display: inline-block;
   position: absolute;
@@ -2439,7 +2455,7 @@ ul {
 }
 
 @media all and (max-width: 991px) {
-  .banner-slider .owl-dots{
+  .banner-slider .owl-dots {
     margin-top: 0px;
     transform: translate(10px, 10px);
     left: 35%;
@@ -3563,6 +3579,7 @@ ul {
   border-radius: 5px;
   overflow: hidden;
   padding: 80px 0px;
+  background-color: var(--secondary-color);
 }
 
 .client-slider .owl-dots {
@@ -3583,6 +3600,11 @@ ul {
   align-self: center;
 }
 
+.client-slider .owl-stage {
+  display: flex;
+  align-items: center;
+}
+
 .client-slider .item .thumb {
   text-align: center;
   align-items: center;
@@ -3590,9 +3612,9 @@ ul {
 }
 
 .client-slider .item .thumb img {
-  width: auto;
+  width: 133px;
   margin: 0 auto;
-  height: 60px;
+  height: auto;
 }
 
 /*********** single-about-inner ***********/
@@ -4715,6 +4737,7 @@ ul {
 
 .footer-area {
   position: relative;
+  margin-top: 100px;
 }
 
 .footer-area.style-two:after {
@@ -4886,7 +4909,7 @@ ul {
   height: auto;
   width: 60px;
   margin-right: 10px;
-  
+
 }
 
 .logo a {

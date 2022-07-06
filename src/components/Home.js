@@ -8,6 +8,7 @@ import Product2 from './section-components/Product2';
 import Product3 from './section-components/Product3';
 import Product4 from './section-components/Product4';
 import About from './section-components/About';
+import Client from './section-components/Client';
 
 
 
@@ -19,6 +20,7 @@ const Home = () => {
         {/* <Service /> */}
         <Product />
         {/* <About /> */}
+        <Client />
         {/* <Video />
         <ProductV2 />
         <Testimonial />
