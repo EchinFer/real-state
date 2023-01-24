@@ -9,14 +9,14 @@ import PropertyPage from '../components/section-components/PropertyPage'
 
 export const AppRouter = () => {
     return (
-        <HashRouter>
+        <BrowserRouter>
             <Routes>
                 <Route path="/properties" element={<PropertyPage />} />
                 <Route path="/property-details" element={<PropertyDetails />} />
                 <Route path="/contact" element={<ContactPage />} />
                 
-                <Route path="/" element={<Home />} />
+                <Route path="/*" element={<Home />} />
             </Routes>
-        </HashRouter>
+        </BrowserRouter>
     )
 }

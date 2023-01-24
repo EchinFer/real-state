@@ -14,20 +14,20 @@ const Navbar = () => {
 						<div className="col-lg-8 text-lg-left text-center">
 							<ul>
 								{/* <li><p><img src={publicUrl + "assets/img/icon/location.png"} alt="img" /> 420 Love Sreet 133/2 flx City</p></li> */}
-								<li><p><img src={publicUrl + "assets/img/icon/phone.png"} alt="img" /> +595 983 263 018</p></li>
-								<li><p><img src={publicUrl + "assets/img/icon/envelope.png"} alt="img" />info.sunset@gmail.com</p></li>
+								<li><p><img src={publicUrl + "assets/img/icon/phone.png"} alt="img" /><a href="tel:+595 983 263 018">+595 983 263 018</a></p></li>
+								<li><p><img src={publicUrl + "assets/img/icon/envelope.png"} alt="img" /><a href='mailto:info.sunset@gmail.com'>info.sunset@gmail.com</a></p></li>
 							</ul>
 						</div>
 						<div className="col-lg-4">
 							<ul className="topbar-right text-lg-right text-center">
-								<li>
+								{/* <li>
 									<Link className="ml-0" to="/sign-up">Registrarse</Link>
 									<Link to="/sign-in">Iniciar Sesión</Link>
-								</li>
+								</li> */}
 								<li className="social-area">
-									<a href="https://www.facebook.com/#/"><i className="fab fa-facebook-f" aria-hidden="true" target="_blank" /></a>
-									<a href="https://www.twitter.com/#/"><i className="fab fa-twitter" aria-hidden="true" target="_blank" /></a>
-									<a href="https://www.instagram-plus.com/#/"><i className="fab fa-instagram" aria-hidden="true" target="_blank" /></a>
+									<a href="https://www.facebook.com"><i className="fab fa-facebook-f" aria-hidden="true" target="_blank" /></a>
+									<a href="https://www.twitter.com"><i className="fab fa-twitter" aria-hidden="true" target="_blank" /></a>
+									<a href="https://www.instagram-plus.com"><i className="fab fa-instagram" aria-hidden="true" target="_blank" /></a>
 								</li>
 							</ul>
 						</div>
@@ -59,8 +59,8 @@ const Navbar = () => {
 							<li className="menu-item-has-children current-menu-item">
 								<Link to="/properties">Propiedades</Link>
 								<ul className="sub-menu">
-									<li><Link to="/#">Venta</Link></li>
-									<li><Link to="/#">Alquiler</Link></li>
+									<li><Link to="/properties/venta">Venta</Link></li>
+									<li><Link to="/properties/alquiler">Alquiler</Link></li>
 								</ul>
 							</li>
 							<li><Link to="/contact">Contacto</Link></li>

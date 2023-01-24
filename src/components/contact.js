@@ -8,7 +8,7 @@ import ContactForm from './section-components/ContactForm';
 const ContactPage = () => {
     return <div>
         <Navbar />
-        <PageHeader headertitle="Contact"  />
+        <PageHeader headertitle="Contacto"  />
         <ContactForm />
         <Footer />
     </div>

@@ -5,6 +5,7 @@ const Product = () => {
 
 	let publicUrl = process.env.PUBLIC_URL + '/'
 
+	
 	return (
 		<div className="product-area pd-top-118 pd-bottom-90 go-top">
 			<div className="container">

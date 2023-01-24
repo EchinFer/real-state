@@ -23,7 +23,8 @@ const ContactForm = () => {
                   <div className="contact-single-list">
                     <h5>Teléfonos</h5>
                     <ul>
-                      <li><img src={publicUrl + "assets/img/icon/phone2.png"} alt="img" /> +(595) 983 263 018</li>                      
+                      <li><img src={publicUrl + "assets/img/icon/phone2.png"} alt="img" /> <a href="tel:+595 983 263 018">+(595) 983 263 018</a></li>                      
+                      <li><i className="fab fa-whatsapp"></i> <a href='https://wa.link/qktc51' target='_blank'>+(595) 983 263 018</a></li>                      
                     </ul>
                   </div>
                 </div>
@@ -41,7 +42,6 @@ const ContactForm = () => {
                     <li><a href="#"><i className="fab fa-facebook-f" aria-hidden="true" /></a></li>
                     <li><a href="#"><i className="fab fa-twitter" aria-hidden="true" /></a></li>
                     <li><a href="#"><i className="fab fa-instagram" aria-hidden="true" /></a></li>
-                    <li><a href="#"><i className="fab fa-skype" aria-hidden="true" /></a></li>
                   </ul>
                 </div>
               </div>

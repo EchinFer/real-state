@@ -1702,7 +1702,7 @@ ul {
   padding: 10px 20px;
   white-space: nowrap;
   transition: all 0.3s;
-  color: #050a30;
+  color: var(--secondary-color);
   font-size: 14px;
   font-weight: 500;
   transition: all 0.4s ease;
@@ -1725,7 +1725,7 @@ ul {
 }
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li:hover {
-  background: #061539;
+  background: var(--main-color);
 }
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li:hover a {
@@ -3825,12 +3825,16 @@ ul {
 
 .contact-single-list ul li:last-child {
   margin-bottom: 0;
+  padding: 0;
 }
 
 .contact-single-list ul li img {
   position: absolute;
   left: 0;
   top: 3px;
+}
+.contact-single-list ul li i {
+  font-size: 20px;
 }
 
 .contact-single-date p {
