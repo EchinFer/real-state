@@ -312,7 +312,6 @@ console.log('Inicia');
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: false,
-                fade: true,
                 asNavFor: '.product-thumbnail-carousel'
               });
         }
@@ -322,7 +321,6 @@ console.log('Inicia');
                 slidesToScroll: 1,
                 asNavFor: '.single-thumbnail-slider',
                 dots: false,
-                centerMode: false,
                 focusOnSelect: true,
                 centerMode: true,
                 arrows:false,

@@ -1,37 +1,49 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { formatNumberToCurrency, noPhotoProductAvailable } from '../../util/util';
 import { Sidebar } from './Sidebar';
+import { MapComponent } from '../global-components/shared/MapComponent';
 
 
 
 
-const PropertyDetailsPage = () => {
+const PropertyDetailsPage = ({ property }) => {
+	const { titulo, descripcion, precio, moneda, tipoPropiedad, imagenes, detallesPropiedad, direccion } = property;
 
-	let publicUrl = process.env.PUBLIC_URL + '/'
+	const { lat, long } = direccion
+
+	let publicUrl = process.env.PUBLIC_URL + '/';
 	useEffect(() => {
 		const $ = window.$;
 		$('body').addClass('body-bg');
 
 	}, []);
 
+	const txt1 = `Hola, quisiera hacer una consulta sobre la propiedad llamada '${titulo}'.`;
+	const txt1encoded = encodeURIComponent(txt1);
+	const link = `https://wa.me/595983263018?text=${txt1encoded}`;
+
+	console.log(imagenes.secundarios.length);
 	return <div className="property-page-area pd-bottom-90 ">
 		<div className="container">
 			<div className="property-details-top pd-bottom-70">
 				<div className="property-details-top-inner">
 					<div className="row">
 						<div className="col-lg-7">
-							<h3>Duplex a estrenar</h3>
-							<p><img src={publicUrl + "assets/img/icon/location2.png"} alt="img" /> Villa Elisa </p>
+							<h3>{titulo}</h3>
+							<p><img src={publicUrl + "assets/img/icon/location2.png"} alt="img" /> {direccion.ciudad}</p>
 							<ul>
-								<li>2 Habitaciones</li>
-								<li>Baño</li>
-								<li>80M²</li>
+								{detallesPropiedad.habitaciones && <li>{detallesPropiedad.habitaciones} Habitaciones</li>}
+								{detallesPropiedad.banos && <li>{detallesPropiedad.banos} {detallesPropiedad.banos > 1 ? 'Baños' : 'Baño'}</li>}
+								{detallesPropiedad.habitaciones && <li>{detallesPropiedad.area}M²</li>}
+
 							</ul>
 						</div>
 						<div className="col-lg-5 text-lg-right">
-							<h4>PYG 285.000.000</h4>
+							<h4>{moneda} {formatNumberToCurrency(precio)}</h4>
 							<div className="btn-wrap">
-								<a className="btn btn-blue btn-sm" href="#">COMPRA</a>
+								{
+									tipoPropiedad.map((item, index) => (<a key={index} className="btn btn-blue btn-sm" href="#">{item.toUpperCase()}</a>))
+								}
 							</div>
 							{/* <ul>
 								<li><img src={publicUrl + "assets/img/icon/1.png"} alt="img" />Marce 9 , 2020</li>
@@ -43,70 +55,61 @@ const PropertyDetailsPage = () => {
 				</div>
 				<div className="product-thumbnail-wrapper">
 					<div className="single-thumbnail-slider">
-						<div className="slider-item">
-							<img src={publicUrl + "assets/img/project-single/villa-elisa/7.jpg"} alt="img" />
-						</div>
-						<div className="slider-item">
-							<img src={publicUrl + "assets/img/project-single/villa-elisa/2.jpg"} alt="img" />
-						</div>
-						<div className="slider-item">
-							<img src={publicUrl + "assets/img/project-single/villa-elisa/3.jpg"} alt="img" />
-						</div>
-						<div className="slider-item">
-							<img src={publicUrl + "assets/img/project-single/villa-elisa/4.jpg"} alt="img" />
-						</div>
-						<div className="slider-item">
-							<img src={publicUrl + "assets/img/project-single/villa-elisa/5.jpg"} alt="img" />
-						</div>
+						{
+							imagenes.secundarios.length > 0 ?
+								imagenes.secundarios.map((imageItem, index) => (
+									<div key={index} className="slider-item">
+										<img src={publicUrl + `assets/img/project-single/${imageItem}`} alt="img" />
+									</div>
+								)) :
+								<div className="slider-item">
+									<img src={publicUrl + `assets/img/product/${noPhotoProductAvailable.portrait}`} alt="img" />
+								</div>
+						}
+
 					</div>
 					<div className="product-thumbnail-carousel">
-						<div className="single-thumbnail-item">
-							<img src={publicUrl + "assets/img/project-single/villa-elisa/1.jpg"} alt="img" />
-						</div>
-						<div className="single-thumbnail-item">
-							<img src={publicUrl + "assets/img/project-single/villa-elisa/2.jpg"} alt="img" />
-						</div>
-						<div className="single-thumbnail-item">
-							<img src={publicUrl + "assets/img/project-single/villa-elisa/3.jpg"} alt="img" />
-						</div>
-						<div className="single-thumbnail-item">
-							<img src={publicUrl + "assets/img/project-single/villa-elisa/4.jpg"} alt="img" />
-						</div>
-						<div className="single-thumbnail-item">
-							<img src={publicUrl + "assets/img/project-single/villa-elisa/5.jpg"} alt="img" />
-						</div>
-						<div className="single-thumbnail-item">
-							<img src={publicUrl + "assets/img/project-single/villa-elisa/2.jpg"} alt="img" />
-						</div>
-						<div className="single-thumbnail-item">
-							<img src={publicUrl + "assets/img/project-single/villa-elisa/3.jpg"} alt="img" />
-						</div>
+						{
+							imagenes.secundarios.length > 0 ?
+								imagenes.secundarios.map((imageItem, item) => (
+									<div key={item} className="single-thumbnail-item">
+										<img src={publicUrl + `assets/img/project-single/${imageItem}`} alt="img" />
+									</div>
+								)) :
+								<div className="single-thumbnail-item">
+									<img src={publicUrl + `assets/img/product/${noPhotoProductAvailable.portrait}`} alt="img" />
+								</div>
+						}
 					</div>
 				</div>
 			</div>
 			<div className="row go-top">
 				<div className="col-lg-8">
 					<div className="single-property-details-inner">
-						<h4>Descripción</h4>
-						<p>
-							Duplex de 80 M2 de Construcción y de terreno mide 6 metros de frente por 14 metros de Fondo. Planta Baja en frente estacionamiento para 2 vehículos con portón basculante no incluye el motor, living /comedor, cocina con un mueble , baño social, atrás un pequeño patio y un fregadero de ropas. Planta Alta : dos dormitorios, un baño familiar, balcón en frente, ciudad de Villa Elisa .</p>
-						<p></p>
+						<div className="single-property-grid">
+							<h4>Descripción</h4>
+							<div className="row">
+								<div className="col-md-12">
+									{descripcion}
+								</div>
+							</div>
+						</div>
 						<div className="single-property-grid">
 							<h4>Detalles propiedad</h4>
 							<div className="row">
 								<div className="col-md-6">
 									<ul>
-										<li>Habitaciones: 2</li>
-										<li>Total ambientes: 6</li>
-										<li>Cocina: 1</li>
-										<li>Clase: Vivienda unifamiliar</li>
+										{detallesPropiedad.habitaciones && <li>Habitaciones: {detallesPropiedad.habitaciones}</li>}
+										{detallesPropiedad.totalambientes && <li>Total ambientes: {detallesPropiedad.totalambientes}</li>}
+										{detallesPropiedad.cocina && <li>Cocina: {detallesPropiedad.cocina}</li>}
+										{detallesPropiedad.clasePropiedad && <li>Clase: {detallesPropiedad.clasePropiedad}</li>}
 									</ul>
 								</div>
 								<div className="col-md-6">
 									<ul>
-										<li>Salas: 1</li>
-										<li>Año construcción: 2021</li>
-										<li>Area: 80M²</li>
+										{detallesPropiedad.salas && <li>Salas: {detallesPropiedad.salas}</li>}
+										{detallesPropiedad.anoConstruccion && <li>Año construcción: {detallesPropiedad.anoConstruccion}</li>}
+										{detallesPropiedad.area && <li>Area: {detallesPropiedad.area}M²</li>}
 									</ul>
 								</div>
 							</div>
@@ -127,11 +130,22 @@ const PropertyDetailsPage = () => {
 							</div>
 						</div> */}
 						<div className="single-property-grid">
-							<h4>Ubicación</h4>
-							<div className="property-map">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d198059.49240377638!2d-57.576892!3d-25.361177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1615660592820!5m2!1sen!2sbd" />
+							<div className="property-actions">
+
+								<a className='btn btn-dark text-light' href={link} target='_blank'><i className="fab fa-whatsapp"></i> Consultar</a>
+
 							</div>
 						</div>
+
+						<div className="single-property-grid">
+							<h4>Ubicación</h4>
+							<div className="property-map">
+								{/* <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d198059.49240377638!2d-57.576892!3d-25.361177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1615660592820!5m2!1sen!2sbd" /> */}
+								<MapComponent latitude={lat} longitude={long} />
+								{/* <PropertyMap /> */}
+							</div>
+						</div>
+
 						{/* <div className="single-property-grid">
 							<h4>Floor Plans</h4>
 							<img src={publicUrl + "assets/img/project-single/6.png"} alt="img" />
@@ -271,7 +285,7 @@ const PropertyDetailsPage = () => {
 				</div>
 
 				{/* SIDEBAR------------------------------------------------------------------------------------------ */}
-				<Sidebar />
+				{/* <Sidebar /> */}
 			</div>
 		</div>
 	</div>

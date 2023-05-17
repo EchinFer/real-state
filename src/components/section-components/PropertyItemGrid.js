@@ -1,72 +1,43 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { formatNumber, formatNumberToCurrency, noPhotoProductAvailable } from '../../util/util';
 
 export const PropertyItemGrid = ({ property }) => {
 
     let publicUrl = process.env.PUBLIC_URL + '/';
+    const navigate = useNavigate();
 
-
-    const { titulo, proveedor, direccion, tipoPropiedad, descripcionCorta, moneda, precio, detallesPropiedad, imagenes } = property;
+    const { id, titulo, proveedor, direccion, tipoPropiedad, descripcionCorta, moneda, precio, detallesPropiedad, imagenes } = property;
 
     const { principal } = imagenes;
-    // {
-    //     id: 1,
-    //     titulo: "Duplex a estrenar",
-    //     direccion: {
-    //         ciudad: "Villa elisa",
-    //         barrio: "",
-    //         ubicacion: {
-    //             lat: "",
-    //             long: ""
-    //         }
-    //     },
-    //     descripcion: "Duplex de 80 M2 de Construcción y de terreno mide 6 metros de frente por 14 metros de Fondo. Planta Baja en frente estacionamiento para 2 vehículos con portón basculante no incluye el motor, living /comedor, cocina con un mueble , baño social, atrás un pequeño patio y un fregadero de ropas. Planta Alta : dos dormitorios, un baño familiar, balcón en frente, ciudad de Villa Elisa.",
-    //     detallesPropiedad: {
-    //         habitaciones: "2",
-    //         totalambientes: "6",
-    //         cocina: "1",
-    //         salas: "1",
-    //         anoConstruccion: "2021",
-    //         clasePropiedad: "Vivienda unifamilar",
-    //         area: "80"
-    //     },
-    //     imagenes: [
-    //         "url"
-    //     ],
-    //     precio: 285000000,
-    //     moneda: "PYG",
-    //     tipoPropiedad: [
-    //         "venta"
-    //     ],
-    //     proveedor: {
-    //         nombreProveedor: "Sunset Realty",
-    //         imagen: "",
-    //         urlProveedor: ""
-    //     }
-    // }
 
-
+    const handleClickProperty = () =>{
+        navigate(`/property-details/${id}`);
+    }
     return (
-        <div className="col-md-6">
-            <div className="single-product-wrap style-2">
+        <div className="col-md-4">
+            <div className="single-product-wrap style-2" onClick={handleClickProperty} style={{cursor: 'pointer'}}>
                 <div className="thumb">
-                    {/* <img src={publicUrl + "assets/img/project/15.png"} alt="img" /> */}
-                    <img src={publicUrl + "assets/img/product/" + principal.landscape} alt="img" />
+                    <Link to={`/property-details/${id}`} style={{ display: 'block'}}>
+                        {/* <img src={publicUrl + "assets/img/project/15.png"} alt="img" /> */}
+                        <img className='thumb-img' src={publicUrl + `assets/img/product/${principal.landscape ?? noPhotoProductAvailable.landscape}`} alt="img" />
+                    </Link>
                     <div className="product-wrap-details">
                         <div className="media">
                             <div className="author">
-                                <img src={publicUrl + "assets/img/author/" + proveedor.imagen} alt="img" />
+                                <img src={publicUrl + "assets/img/logos/" + proveedor.imagen} alt="img" />
                             </div>
                             <div className="media-body">
-                                <h6><Link to="/property-details">{proveedor.nombreProveedor}</Link></h6>
+                                <h6><Link to={proveedor.urlProveedor}>{proveedor.nombreProveedor}</Link></h6>
                                 <p><img src={publicUrl + "assets/img/icon/location-alt.png"} alt="img" />{direccion.ciudad}</p>
                             </div>
                             <a className="fav-btn float-right" href="#"><i className="far fa-heart" /></a>
                         </div>
                     </div>
+
                 </div>
                 <div className="product-details-inner">
-                    <h4><Link to="/property-details">{titulo}</Link></h4>
+                    <h4><Link to={`/property-details/${id}`}>{titulo}</Link></h4>
                     <ul className="meta-inner">
                         <li><img src={publicUrl + "assets/img/icon/location2.png"} alt="img" />{direccion.ciudad}</li>
                         {
@@ -74,7 +45,7 @@ export const PropertyItemGrid = ({ property }) => {
                         }
                     </ul>
                     <p>{descripcionCorta}</p>
-                    <span className="price"> {moneda} {Intl.NumberFormat('de-DE').format(precio)}</span>
+                    <span className="price"> {moneda} {formatNumberToCurrency(precio)}</span>
                 </div>
                 <div className="product-meta-bottom style-2">
                     <span>{detallesPropiedad.habitaciones} <span>Habitaciones</span></span>

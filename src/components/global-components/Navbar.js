@@ -25,9 +25,9 @@ const Navbar = () => {
 									<Link to="/sign-in">Iniciar Sesión</Link>
 								</li> */}
 								<li className="social-area">
-									<a href="https://www.facebook.com"><i className="fab fa-facebook-f" aria-hidden="true" target="_blank" /></a>
-									<a href="https://www.twitter.com"><i className="fab fa-twitter" aria-hidden="true" target="_blank" /></a>
-									<a href="https://www.instagram-plus.com"><i className="fab fa-instagram" aria-hidden="true" target="_blank" /></a>
+									<a href="https://www.facebook.com/Sunsetrealtypy" target="_blank"><i className="fab fa-facebook-f" aria-hidden="true" target="_blank" /></a>
+									{/* <a href="https://www.twitter.com"><i className="fab fa-twitter" aria-hidden="true" target="_blank" /></a> */}
+									{/* <a href="https://www.instagram-plus.com"><i className="fab fa-instagram" aria-hidden="true" target="_blank" /></a> */}
 								</li>
 							</ul>
 						</div>
@@ -58,10 +58,10 @@ const Navbar = () => {
 							</li>
 							<li className="menu-item-has-children current-menu-item">
 								<Link to="/properties">Propiedades</Link>
-								<ul className="sub-menu">
+								{/* <ul className="sub-menu">
 									<li><Link to="/properties/venta">Venta</Link></li>
 									<li><Link to="/properties/alquiler">Alquiler</Link></li>
-								</ul>
+								</ul> */}
 							</li>
 							<li><Link to="/contact">Contacto</Link></li>
 						</ul>

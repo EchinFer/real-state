@@ -39,9 +39,9 @@ const ContactForm = () => {
                 </div> */}
                 <div className="col-md-6 align-self-start text-md-left">
                   <ul className="social-area style-3">
-                    <li><a href="#"><i className="fab fa-facebook-f" aria-hidden="true" /></a></li>
-                    <li><a href="#"><i className="fab fa-twitter" aria-hidden="true" /></a></li>
-                    <li><a href="#"><i className="fab fa-instagram" aria-hidden="true" /></a></li>
+                    <li><a href="https://www.facebook.com/Sunsetrealtypy"><i className="fab fa-facebook-f" aria-hidden="true" /></a></li>
+                    {/* <li><a href="#"><i className="fab fa-twitter" aria-hidden="true" /></a></li> */}
+                    {/* <li><a href="#"><i className="fab fa-instagram" aria-hidden="true" /></a></li> */}
                   </ul>
                 </div>
               </div>

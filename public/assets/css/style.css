@@ -2403,7 +2403,7 @@ ul {
 .banner-area-3 .banner-meta-inner .btn {
   position: absolute;
   top: 50%;
-  right: -110px;
+  right: -135px;
   margin-top: -23px;
   background-color: var(--secondary-color);
 }
@@ -2806,6 +2806,13 @@ ul {
   overflow: hidden;
   border-radius: 5px;
 }
+.single-product-wrap .thumb.thumb-img {
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  height: 240px;
+}
 
 .single-product-wrap .thumb:before {
   content: "";
@@ -2836,6 +2843,12 @@ ul {
 .single-product-wrap .thumb img {
   transition: all 0.4s ease-in;
   transform: scale3d(1, 1, 1);
+}
+
+.single-product-wrap .thumb .thumb-img {
+  height: 240px;
+  object-fit: cover;
+  width: 100%;
 }
 
 .single-product-wrap .thumb .cat {
@@ -4232,7 +4245,7 @@ ul {
 
 .single-property-grid {
   background: #fff;
-  padding: 35px 0px;
+  padding: 35px 20px;
   margin-bottom: 40px;
   border-radius: 7px;
 }

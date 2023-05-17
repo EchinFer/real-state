@@ -2,17 +2,43 @@ import { Link } from 'react-router-dom';
 
 
 import React from 'react'
+import { properties } from '../../data/properties';
+import { formatNumberToCurrency, noPhotoProductAvailable } from '../../util/util';
 
 const Banner = () => {
 
 	const publicUrl = process.env.PUBLIC_URL + '/';
+
+	const lastProperties = properties.filter(property => property.destacado == true).slice(0, 3);
 
 	return (
 		<div className="banner-area banner-area-3 banner-area-bg" style={{ background: 'url(' + publicUrl + 'assets/img/banner/3.png)' }}>
 
 			<div className="container-fluid">
 				<div className="banner-slider owl-carousel">
-					<div className="item">
+					{
+						lastProperties.map(({id, imagenes, moneda, precio, titulo, direccion}) => (
+							<div key={id} className="item">
+								<div className="banner-area-inner">
+									<div className="banner-img-inner">
+										<img src={`${publicUrl}assets/img/product/${imagenes.principal.full ?? noPhotoProductAvailable.landscape}`} />
+										{/* <img className='thumb-img' src={publicUrl + `assets/img/product/${principal.landscape ?? noPhotoProductAvailable.landscape}`} alt="img" /> */}
+									</div>
+									<div className="row justify-content-center banner-desc">
+										<div className="container banner-meta-inner">
+											<div className='banner-meta'>
+												<h4>{titulo}</h4>
+												<img src={publicUrl + "assets/img/icon/location.png"} alt="img" />
+												<span>{direccion.ciudad}</span>
+												<div className="btn btn-blue">{moneda} {formatNumberToCurrency(precio)}</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						))
+					}
+					{/* <div className="item">
 						<div className="banner-area-inner">
 							<div className="banner-img-inner">
 								<img src={publicUrl + "assets/img/product/casas/casa1.png"} />
@@ -28,7 +54,7 @@ const Banner = () => {
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</div>
 
